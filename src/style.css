@@ -11,8 +11,8 @@
   --dark: #303134;
   --gray: #8f9093;
   --white: #fff;
-  --primary: #e3350d;
-  --secondary: #ffe165;
+  --primary: #841b18;
+  --secondary: #016da9;
 }
 
 body {
@@ -27,6 +27,7 @@ body {
   margin: 1em auto;
   padding-bottom: 10vh;
 }
+
 textarea:focus,
 input:focus {
   outline: none;

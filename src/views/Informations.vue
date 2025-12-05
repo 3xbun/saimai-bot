@@ -2,15 +2,22 @@
   <div>
     <div id="changelog"></div>
     <hr />
-    <p>© 2024 Bunnasorn Kaewsiri, All rights reserved.</p>
+    <p>
+      Made with
+      <i style="color: var(--primary)" class="fa-solid fa-heart"></i>
+      in Sai Mai, BKK by
+      <a style="text-decoration: underline" href="https://3xbun.com">3xbun</a>.
+    </p>
     <hr />
     <p>
-      ข้อความและรูปภาพที่เกี่ยวข้องกับ Pokémon Trading Card Game
-      รวมไปถึงรูปภาพการ์ด เป็นลิขสิทธิ์ของ The Pokémon Company Internaltional,
-      inc <br />
-      เว็บไซต์ THDex เป็นเว็บไซต์ที่ถูกจัดทำโดยบุคคลที่ 3 ไม่ได้จัดทำ
-      ได้รับการรับรอง สนับสนุน หรือมีความเกี่ยวข้องกับ Nintendo, Game Freak,
-      Niantic, Wizards of the Coast หรือ The Pokémon Company แต่อย่างใด
+      ข้อความและรูปภาพที่เกี่ยวข้องกับ Battle of Talingchan
+      รวมถึงภาพการ์ดทั้งหมด เป็นลิขสิทธิ์ของ บริษัท พสุโลล จำกัด และบริษัท
+      ไลอ้อน เฮ้าส์ จำกัด ผู้ถือลิขสิทธิ์อย่างเป็นทางการของ Battle of Talingchan
+      <br />
+      เว็บไซต์ SAI MAI เป็นเว็บไซต์ที่จัดทำโดยบุคคลที่สาม มิได้จัดทำ
+      ได้รับการรับรอง สนับสนุน หรือมีความเกี่ยวข้องกับ บริษัท พสุโลล จำกัด
+      บริษัท ไลอ้อน เฮ้าส์ จำกัด หรือผู้ถือลิขสิทธิ์รายอื่นของ Battle of
+      Talingchan แต่อย่างใด
     </p>
   </div>
 </template>

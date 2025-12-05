@@ -1,36 +1,33 @@
 <template>
+  <Header />
   <div class="container">
-    <div class="cards">
-      <div v-for="card in cards" class="card" :key="card.Id">
-        <img
-          v-if="card.ImageLink"
-          :src="
-            'https://ndb.3xbun.com/' +
-            card.ImageLink[0].thumbnails.card_cover.signedPath
-          "
-          alt=""
-        />
-        <img
-          v-else
-          src="https://placehold.co/400x600?text=COMING+SOON"
-          alt=""
-        />
-        <p>{{ card.Name }}</p>
-        <p class="print">{{ card.Print }}</p>
-      </div>
-    </div>
+    <RouterView />
   </div>
 </template>
 
 <script setup>
 import axios from "axios";
-import { onMounted, ref } from "vue";
+import { onMounted, provide, ref } from "vue";
 
-import Card from "./components/Card.vue";
+import Header from "./components/Header.vue";
 
-const cards = ref([]);
+const Cards = ref([]);
+const Collections = ref([]);
+const showModal = ref(false);
+
+provide("Collections", Collections);
+provide("Cards", Cards);
+provide("showModal", showModal);
 
 onMounted(() => {
+  const col = localStorage.getItem("Collections");
+
+  if (col) {
+    Collections.value = JSON.parse(col);
+  } else {
+    localStorage.setItem("Collections", JSON.stringify(Collections.value));
+  }
+
   const options = {
     method: "GET",
     url: "https://ndb.3xbun.com/api/v2/tables/m5ft8mrsme12ias/records",
@@ -48,7 +45,7 @@ onMounted(() => {
   axios
     .request(options)
     .then((res) => {
-      cards.value = res.data.list;
+      Cards.value = res.data.list;
     })
     .catch((err) => console.error(err));
 });
